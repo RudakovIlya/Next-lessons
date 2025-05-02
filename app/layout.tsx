@@ -1,11 +1,13 @@
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+import "@/app/ui/global.css";
+import { inter } from "@/app/ui/fonts";
+import { ReactNode } from "react";
+
+type TProps = { children: ReactNode };
+
+export default function RootLayout({ children }: TProps) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
 }
